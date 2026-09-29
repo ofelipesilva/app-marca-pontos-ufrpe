@@ -1,0 +1,61 @@
+.menu{
+    background-color: #333;
+    text-align: left;
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+
+    transition: 0.5s;
+
+    padding-top: 60px;
+    overflow: hidden;
+}
+
+.menu a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+
+    display: block;
+    transition: 0.5s;
+}
+
+.menu a:hover{
+    color: #fff;
+}
+
+.menu .closeMenu{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 35px;
+}
+
+.menubtn{
+    width: 100%;
+    margin-bottom: 10px;
+
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: right;
+
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px rgb(66, 66, 66);
+    cursor: pointer;
+    background: linear-gradient(27deg, rgb(250, 246, 246), rgba(172, 170, 170, 0.384), rgb(250, 246, 246));
+}
+
+.menubtn:hover{
+    background: linear-gradient(27deg, rgb(179, 179, 179), rgba(95, 94, 94, 0.384), rgb(179, 179, 179));
+}
+
+.menubtn:focus {
+    outline: none;
+    background: linear-gradient(27deg, rgb(77, 77, 77), rgba(43, 43, 43, 0.384), rgb(77, 77, 77));
+}
