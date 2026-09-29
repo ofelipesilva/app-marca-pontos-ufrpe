@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="icon" href="scoreboard2.png">
+        <link rel="stylesheet" href="styles/popup-style.css">
+        <link rel="stylesheet" href="styles/menu.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>Marca Pontos</title>
+    </head>
+    <body>
+        <div class="popup-wrapper">
+            <div class="popup">
+                <div class="popup-close">x</div>
+                    <div class="popup-content save-log">
+                        <h2>Título do Log</h2>
+
+                        <form>
+                            <input type="text" name="logName" placeholder="ex: mesa 1">
+                            <button type="submit" class="popup-button">Salvar Log</button>
+                        </form>
+                    </div>
+            </div>
+        </div>
+
+        <div class="popup-wrapper">
+            <div class="popup">
+                <div class="popup-close">x</div>
+                    <div class="popup-content">
+                        <h2>Log realizado com sucesso!</h2>
+
+                        <button class="popup-button" onclick="closePopup(1)">Fechar</button>
+                    </div>
+            </div>
+        </div>
+
+        <div class="popup-wrapper log-container">
+            <div class="popup log-wrapper">
+                <div class="popup-close">x</div>
+                <div class="log-content">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="app">
+            <button class="menubtn" onclick="openMenu()">☰</button>
+
+            <div class="menu">
+                <a href="javascrit:void(0)" onclick="closeMenu()" class="closeMenu">x</a>
+                <a href="javascrit:void(0)" class="reset">Resetar</a>
+                <a href="javascrit:void(0)" class="log">Salvar ao Log</a>
+                <a href="javascrit:void(0)" class="log display">Mostrar Log</a>
+                <a href="javascrit:void(0)" onclick="localStorage.clear()" class="log display">Resetar Log</a>
+            </div>
+
+            <div class="mesa">
+                <div class="player">
+                    <input type="text" placeholder="nome do jogador">
+                    <i class="minus fa fa-minus"></i>
+                    <button class="score">0</button>
+                    <i class="trash fa fa-trash-o"></i>
+                </div>
+
+                <div class="player" style="background-color: #C71C24;">
+                    <input type="text" placeholder="nome do jogador">
+                    <i class="minus fa fa-minus"></i>
+                    <button class="score" style="background-color: #C71C24;">0</button>
+                    <i class="trash fa fa-trash-o"></i>
+                </div>
+            </div>
+
+            <div class="novoJogador">
+                <button class="addJogador">Adicionar jogador</button>
+                <!-- <button class="reset">Resetar</button>
+                <button class="log">Log</button>
+                <button class="log display" style="background-color: crimson;">Mostrar Log</button> -->
+            </div>
+
+            <div class="credit">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        </div>
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/popup.js"></script>
+        <script src="scripts/log.js"></script>
+    </body>
+</html>
