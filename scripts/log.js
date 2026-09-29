@@ -44,7 +44,23 @@ logButton.addEventListener('click', () => {
         }
     });
 
-    
+    // ORGANIZAR POR PONTUAÇÃO
+    u.forEach(game => {
+        game.sort((a, b) => b.pontos - a.pontos);
+    });
+
+    // PARTE GRÁFICA
+    u.forEach(game => {
+        const ul = document.createElement('ul');
+        displayLog.innerHTML += `<h2>${game[0].title}</h2>`;
+        game.forEach(pl => {
+            ul.innerHTML += `
+                <li>${pl.nome}: ${pl.pontos}</li>
+            `;
+        });
+        displayLog.appendChild(ul);
+        displayLog.innerHTML += '<hr>'
+    });
 
     displayLog.innerHTML += '<button class="popup-button" onclick="closePopup(2)">Fechar</button>';
     document.querySelector('.menu').style.width = '0';
